@@ -4,7 +4,9 @@ concern :api_base do
   resources :cats
   resources :dogs
   get "dog/random" => 'dogs#random'
+  get "dog/search_breed" => 'dogs#search_breed'
   get "cat/random" => 'cats#random'
+  get "cat/search_breed" => 'cats#search_breed'
 end
 
 namespace :v1 do

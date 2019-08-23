@@ -32,7 +32,12 @@ class V1::DogsController < ApplicationController
   def random
    @dog = Dog.random
    json_response(@dog)
+  end
 
+  def search_breed
+    @breed = params[:breed]
+    @breeds = Dog.search_breed(@breed)
+    json_response(@breeds)
   end
 
   private

@@ -34,6 +34,12 @@ class V1::CatsController < ApplicationController
     json_response(@cat)
   end
 
+  def search_breed
+    @breed = params[:breed]
+    @breeds = Cat.search_breed(@breed)
+    json_response(@breeds)
+  end
+
   private
 
   def cat_params
