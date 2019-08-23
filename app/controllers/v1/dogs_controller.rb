@@ -36,8 +36,14 @@ class V1::DogsController < ApplicationController
 
   def search_breed
     @breed = params[:breed]
-    @breeds = Dog.search_breed(@breed)
-    json_response(@breeds)
+    @query = Dog.search_breed(@breed)
+    json_response(@query)
+  end
+
+  def search_age
+    @age = params[:age]
+    @query = Dog.search_age(@age)
+    json_response(@query)
   end
 
   private
