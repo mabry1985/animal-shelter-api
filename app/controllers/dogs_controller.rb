@@ -29,6 +29,12 @@ class DogsController < ApplicationController
     @dog.destroy
   end
 
+  def random
+   @dog = Dog.random
+   json_response(@dog)
+
+  end
+
   private
 
   def dog_params

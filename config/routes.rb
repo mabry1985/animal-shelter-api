@@ -3,5 +3,7 @@ Rails.application.routes.draw do
 
   resources :cats
   resources :dogs
-  
+
+  get "dog/random" => 'dogs#random'
+  get "cat/random" => 'cats#random'
 end

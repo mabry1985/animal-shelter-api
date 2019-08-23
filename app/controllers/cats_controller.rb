@@ -29,6 +29,11 @@ class CatsController < ApplicationController
     @cat.destroy
   end
 
+  def random
+    @cat = Cat.random
+    json_response(@cat)
+  end
+
   private
 
   def cat_params
