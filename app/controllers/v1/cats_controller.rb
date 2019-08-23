@@ -1,4 +1,4 @@
-class CatsController < ApplicationController
+class V1::CatsController < ApplicationController
 
   def index
     @cats = Cat.all
