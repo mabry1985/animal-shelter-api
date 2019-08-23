@@ -11,13 +11,17 @@ class DogsController < ApplicationController
   end
 
   def create
-    @dog = Dog.create(dog_params)
-    json_response(@dog)
+    @dog = Dog.create!(dog_params)
+    json_response(@dog, :create)
   end
 
   def update
     @dog = Dog.find(params[:id])
-    @dog.update(dog_params)
+    if @dog.update!(dog_params)
+    render status: 200, json: {
+      message: "This dog has been updated successfully."
+    }
+    end
   end
 
   def destroy
@@ -26,9 +30,6 @@ class DogsController < ApplicationController
   end
 
   private
-  def json_response(object, status = :ok)
-    render json: object, status: status
-  end
 
   def dog_params
     params.permit(:author, :content)
