@@ -26,7 +26,11 @@ class V1::CatsController < ApplicationController
 
   def destroy
     @cat = Cat.find(params[:id])
-    @cat.destroy
+    if @cat.destroy!
+      ender status: 200, json: {
+        message: "This cat has been destroyed"
+      }
+    end
   end
 
   def random

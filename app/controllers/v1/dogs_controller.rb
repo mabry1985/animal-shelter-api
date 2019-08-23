@@ -18,15 +18,19 @@ class V1::DogsController < ApplicationController
   def update
     @dog = Dog.find(params[:id])
     if @dog.update!(dog_params)
-    render status: 200, json: {
-      message: "This dog has been updated successfully."
-    }
+      render status: 200, json: {
+        message: "This dog has been updated successfully."
+      }
     end
   end
 
   def destroy
     @dog = Dog.find(params[:id])
-    @dog.destroy
+    if @dog.destroy!
+      ender status: 200, json: {
+        message: "This dog has been destroyed"
+      }
+    end
   end
 
   def random
