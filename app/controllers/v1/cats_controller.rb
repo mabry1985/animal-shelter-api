@@ -40,7 +40,7 @@ class V1::CatsController < ApplicationController
     json_response(@query)
   end
 
-  def search_age
+  def searcnh_age
     @age = params[:age]
     @query = Cat.search_age(@age)
     json_response(@query)
