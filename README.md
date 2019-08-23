@@ -4,7 +4,7 @@
 
 ## Description
 
-_This is an API I built for my independent project for Rails at Epicodus._
+_This is an API I built for my independent project for Rails at Epicodus. It's for a fictional animal shelter and is a database of the dogs and cats available at the shelter._
 
 ## Endpoints
 
