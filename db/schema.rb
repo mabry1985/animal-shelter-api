@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2019_08_23_174200) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cats_tables", force: :cascade do |t|
+  create_table "cats", force: :cascade do |t|
     t.string "name"
     t.string "breed"
     t.string "sex"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_08_23_174200) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "dogs_tables", force: :cascade do |t|
+  create_table "dogs", force: :cascade do |t|
     t.string "name"
     t.string "breed"
     t.string "sex"

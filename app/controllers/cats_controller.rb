@@ -1,27 +1,27 @@
-class QuotesController < ApplicationController
+class CatsController < ApplicationController
 
   def index
-    @cats = Quote.all
+    @cats = Cat.all
     json_response(@cats)
   end
 
   def show
-    @cat = Quote.find(params[:id])
+    @cat = Cat.find(params[:id])
     json_response(@cat)
   end
 
   def create
-    @cat = Quote.create(cat_params)
+    @cat = Cat.create(cat_params)
     json_response(@cat)
   end
 
   def update
-    @cat = Quote.find(params[:id])
+    @cat = Cat.find(params[:id])
     @cat.update(cat_params)
   end
 
   def destroy
-    @cat = Quote.find(params[:id])
+    @cat = Cat.find(params[:id])
     @cat.destroy
   end
 
