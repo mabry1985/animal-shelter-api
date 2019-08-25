@@ -8,25 +8,25 @@ _This is an API I built for my independent project for Rails at Epicodus. It's f
 
 ## Endpoints
 
-* https://morning-river-57886.herokuapp.com/v1/dogs get all dogs available
+* GET https://morning-river-57886.herokuapp.com/v1/dogs get all dogs available
 
-* https://morning-river-57886.herokuapp.com/v1/cats get all cats available
+* GET https://morning-river-57886.herokuapp.com/v1/cats get all cats available
 
-* https://morning-river-57886.herokuapp.com/v1/dog/random get random dog
+* GET https://morning-river-57886.herokuapp.com/v1/dog/random get random dog
 
-* https://morning-river-57886.herokuapp.com/v1/dog/random get random cat
+* GET https://morning-river-57886.herokuapp.com/v1/dog/random get random cat
 
-* https://morning-river-57886.herokuapp.com/v1/dog/[:id] get dog with passed in id
+* GET https://morning-river-57886.herokuapp.com/v1/dogs/[:id] get dog with passed in id
 
-* https://morning-river-57886.herokuapp.com/v1/cat/[:id] get cat with passed in id
+* GET https://morning-river-57886.herokuapp.com/v1/cats/[:id] get cat with passed in id
 
-* https://morning-river-57886.herokuapp.com/v1/cats/search_breed?breed=[param] searches for cat by breed, will get all cats that match the search.
+* GET https://morning-river-57886.herokuapp.com/v1/cat/search_breed?breed=[param] searches for cat by breed, will get all cats that match the search.
 
-* https://morning-river-57886.herokuapp.com/v1/dogs/search_breed?breed=[param] searches for dog by breed, will get all dogs that match the search.
+* GET https://morning-river-57886.herokuapp.com/v1/dog/search_breed?breed=[param] searches for dog by breed, will get all dogs that match the search.
 
-* https://morning-river-57886.herokuapp.com/v1/dogs/search_age?breed=[param] searches for dog by age, will get all dogs that match the search.
+* GET https://morning-river-57886.herokuapp.com/v1/dog/search_age?breed=[param] searches for dog by age, will get all dogs that match the search.
 
-* https://morning-river-57886.herokuapp.com/v1/cats/search_age?breed=[param] searches for dog by age, will get all cats that match the search.
+* GET https://morning-river-57886.herokuapp.com/v1/cat/search_age?breed=[param] searches for dog by age, will get all cats that match the search.
 
 ## Technologies used
 * Ruby on Rails

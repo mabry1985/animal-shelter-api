@@ -8,7 +8,7 @@ concern :api_base do
   get "dog/search_age" => 'dogs#search_age'
   get "cat/random" => 'cats#random'
   get "cat/search_breed" => 'cats#search_breed'
-  get "cat/search_age" => 'cats#search_age'
+  get "dog/search_breed" => 'dogs#search_breed'
 end
 
 namespace :v1 do
